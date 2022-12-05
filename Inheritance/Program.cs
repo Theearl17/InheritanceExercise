@@ -1,39 +1,38 @@
 ﻿using System;
+using System.Net.NetworkInformation;
 
 namespace Inheritance
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
+
         {
-            // TODO Be sure to follow best practice when creating your classes
+            var myBird = new Bird();
 
-            // Create a class Animal
-            // give this class 4 members that all Animals have in common
-
-
-            // Create a class Bird
-            // give this class 4 members that are specific to Bird
-            // Set this class to inherit from your Animal Class
-
-            // Create a class Reptile
-            // give this class 4 members that are specific to Reptile
-            // Set this class to inherit from your Animal Class
+            myBird.BirthDate = 0;
+            myBird.HeartBeat = true;
+            myBird.MatingRitual = "Attractive";
+            myBird.EnemiesCount = 50;
 
 
 
+            Console.WriteLine("------------------");
 
-            /*Create an object of your Bird class
-             *  give values to your members using the object of your Bird class
-             *  
-             * Creatively display the class member values 
-             */
 
-            /*Create an object of your Reptile class
-             *  give values to your members using the object of your Reptile class
-             *  
-             * Creatively display the class member values 
-             */
+            var myReptile = new Reptile();
+            myReptile.TinySharpTeeth = 30;
+            myReptile.FamilyName3 = "lizards";
+            myReptile.LongTongues = true;
+
+            var myAnimals = new Animal[] { myBird, myReptile };
+            foreach (var Animal in myAnimals)
+            {
+                Console.WriteLine($" My family name is:{Animal.FamilyName}");
+                Console.WriteLine($" {Animal.HeartBeat}I do have a heart beat.");
+                Console.WriteLine($" My birthdate is: {Animal.BirthDate}");
+                Console.WriteLine($" I have {Animal.EnemiesCount} enemies.");
+            }
         }
     }
 }
