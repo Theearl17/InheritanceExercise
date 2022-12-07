@@ -22,14 +22,7 @@ namespace Inheritance
         public string MatingRitual { get; set; }
 
 
-        Bird myBird = new Bird ()
-        {
-                Familyname2 = Birdae;
-                Wings = Furry;
-                Talons = Sharp;
-                MatingRitual = Fancy;
-
-        }
+        
 
 
 
